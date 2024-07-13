@@ -1,0 +1,49 @@
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
+
+# include <iostream>
+# include <string>
+template<typename T>
+void swap(T &a, T &b)
+{
+	T c;
+	c = a;
+	a = b;
+	b = c;
+}
+template<typename T>
+T min(T &a, T &b)
+{
+	if (a < b)
+		return a;
+	else
+		return b;
+}
+
+template<typename T>
+T max(T &a, T&b)
+{
+	if (a < b)
+		return b;
+	else
+		return a;
+}
+
+class Whatever
+{
+
+	public:
+
+		Whatever();
+		Whatever( Whatever const & src );
+		~Whatever();
+
+		Whatever &		operator=( Whatever const & rhs );
+
+	private:
+
+};
+
+std::ostream &			operator<<( std::ostream & o, Whatever const & i );
+
+#endif /* ******************************************************** WHATEVER_H */
